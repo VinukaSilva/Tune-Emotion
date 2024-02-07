@@ -3,7 +3,7 @@ from rag_with_palm import RAGPaLMQuery
 # Instantiate the class
 rag_palm_query_instance = RAGPaLMQuery()
 
-st.title(f"**READIFY Assistant** :panda_face:")  # Add emojis and colors to the title
+st.markdown(f"<h1 style='color:white;'>TuneEmotion Assistant 🎵🎭</h1>", unsafe_allow_html=True)
 # Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -12,7 +12,7 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 # React to user input
-if prompt := st.chat_input("Need info? Drop your question here!"):
+if prompt := st.chat_input("Need songs? Drop your question here!"):
     # Display user message in chat message container
     st.chat_message("user").markdown(prompt)
     # Add user message to chat history
