@@ -16,7 +16,7 @@ class RAGPaLMQuery:
         self.documents = SimpleDirectoryReader("./data").load_data()
 
         # Set up API key for PaLM
-        os.environ['GOOGLE_API_KEY'] = 'AIzaSyBGCQa1eH2eK5QCA6RiGWJtArZgh7YG4H0'
+        os.environ['GOOGLE_API_KEY'] = 'Your API key'
 
         # Initialize PaLM and Hugging Face embedding model
         self.llm = PaLM()
